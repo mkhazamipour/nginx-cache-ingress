@@ -7,3 +7,10 @@ docker build -t nginx-cache .
 ```bash
 docker run -dit -e URL=URL_TO_BE_CACHED(http/s://cker.ir) -e SIZE=CACHE_SIZE(example 5g) --name=caching nginx-cache
 ```
+# OR
+```bash
+docker pull mormoroth/nginx-cache
+```
+```bash
+docker run -dit -e URL=https://ha.cker.ir -e SIZE=3g --name nginx-cache mormoroth/nginx-cache:latest
+```
