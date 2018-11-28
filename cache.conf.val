@@ -1,0 +1,1 @@
+proxy_cache_path /tmp/cache/ levels=1:2 keys_zone=cache:100m max_size=$SIZE inactive=600m use_temp_path=off;
