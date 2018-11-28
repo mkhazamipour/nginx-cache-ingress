@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+  name: nginx-cache
+  namespace: cker-endpoint
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx-cache
+    spec:
+      containers:
+      - env:
+        - name: SIZE
+          value: 3g
+        - name: URL
+          value: https://somesite.tobe.cached
+        image: mormoroth/nginx-cache:latest
+        imagePullPolicy: IfNotPresent
+        name: nginx-cache
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: 200Mi
+      restartPolicy: Always

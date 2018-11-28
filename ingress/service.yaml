@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: nginx-cache
+  name: nginx-cache
+  namespace: cker-endpoint
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: nginx-cache
+  type: ClusterIP
