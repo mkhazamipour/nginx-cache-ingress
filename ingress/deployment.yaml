@@ -18,7 +18,7 @@ spec:
         - name: URL
           value: https://somesite.tobe.cached
         image: mormoroth/nginx-cache:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         name: nginx-cache
         ports:
         - containerPort: 80
