@@ -1,5 +1,5 @@
 # nginx-cache-ingress
-Nginx with enabled cache and custom environment variable to deploy on kubernetes cluster as part of caching system.
+Nginx with enabled local cache and custom environment variable to deploy on kubernetes cluster as part of caching system.
 # Instruction
 ```bash
 docker build -t nginx-cache .
